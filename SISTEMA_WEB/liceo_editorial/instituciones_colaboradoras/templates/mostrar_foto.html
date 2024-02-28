@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mostrar Foto</title>
+</head>
+<body>
+
+<table>
+  <tr>
+  {% for foto in fotos %}
+    <td>
+      <h2>{{ foto.title }}</h2>
+      <img src="{{ foto.photo.url }}" alt="{{ foto.title }}" style="max-width: 100px; max-height: 100px;">
+    </td>
+  {% endfor %}
+  </tr>
+</table>
+
+
+
+
+
+</body>
+</html>

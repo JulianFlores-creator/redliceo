@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <!-- Incluir Font Awesome mediante CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        /* Estilos CSS para el formulario */
+        form {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Para incluir el padding en el ancho total */
+        }
+
+        button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        p {
+            font-size: 16px;
+            text-align: justify;
+            line-height: 1.5;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        table{
+            margin: 0 auto;
+        }
+
+        /* Estilo opcional para el botón */
+        .home-button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Estilo opcional para el ícono */
+        .home-icon {
+            margin-right: 5px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+<table>
+    <tr>
+        <td colspan="2"><h1>Contacto</h1></td>
+    </tr>
+    <form method="post">
+        {% csrf_token %}
+        <tr>
+            <td colspan="2">{{ form.as_p }}</td>
+        </tr>
+        <tr>
+            <td colspan="2"><button type="submit">Enviar</button></td>
+        </tr>
+
+    </form>
+</table>
+
+
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lista de Eventos</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1 {
+    text-align: center;
+    color: #333;
+    margin-top: 20px;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 800px;
+  }
+
+  li {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    padding: 20px;
+  }
+
+  h2 {
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  p {
+    color: #666;
+    margin-bottom: 10px;
+  }
+
+    .evento-imagen {
+        width: 80%;
+        border-radius: 8px;
+        display: block;
+        margin: 0 auto; /* Esto centrará la imagen horizontalmente */
+    }
+
+       /* Estilo cuando se pasa el mouse sobre la imagen */
+          img:hover {
+            transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+          }
+
+</style>
+</head>
+<body>
+
+<h1>GALERIA DE EVENTOS</h1>
+<ul>
+  {% for event in eventos %}
+  <li>
+    <h2>{{ event.title }}</h2>
+    <img src="{{ event.image.url }}" alt="{{ event.title }}" class="evento-imagen">
+    <a href="detalleEvento/{{event.id}}/" class="text-center">Detalles</a>
+  </li>
+
+  {% endfor %}
+</ul>
+
+</body>
+</html>

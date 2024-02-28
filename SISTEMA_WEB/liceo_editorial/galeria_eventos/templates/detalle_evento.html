@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-top: 50px;
+        }
+        h2 {
+            color: #007bff;
+            text-align: center;
+        }
+        p {
+            color: #666;
+            text-align: center;
+            margin-top: 20px;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .evento-imagen {
+        width: 50%;
+        border-radius: 8px;
+        display: block;
+        margin: 0 auto; /* Esto centrará la imagen horizontalmente */
+        }
+    </style>
+</head>
+<body>
+    <h1>Detalles del Evento</h1>
+    <h2>{{ evento.title }}</h2>
+    <p>{{ evento.description }}</p>
+    <p>Fecha: {{ evento.date }}</p>
+    <img src="{{ evento.image.url }}" alt="{{ evento.title }}"  class="evento-imagen">
+</body>
+</html>

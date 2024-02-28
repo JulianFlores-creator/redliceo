@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LGC</title>
+    <!-- Incluye el CSS de Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- Estilos personalizados -->
+             <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+            color: black;
+            transition: all 0.3s ease;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        h1 {
+            text-align: center;
+            color: black;
+        }
+
+        h2{
+             text-align: left;
+             color: black;
+             font-weight: bold;
+        }
+
+        .form-group {
+            text-align: center;
+        }
+        .form-control {
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            transition: border-color 0.3s ease;
+        }
+        .form-control:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            border-bottom: 1px solid #dee2e6;
+            text-align: left;
+        }
+        th {
+            background-color: #800000;
+            color: #fff;
+            font-weight: bold;
+        }
+        tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tbody tr:hover {
+            background-color: #e2e6ea;
+        }
+        a {
+            color: #007bff;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #0056b3;
+        }
+
+        nav {
+          background-color: #d0d1ff; /* Color de fondo */
+          padding: 10px; /* Espacio interno */
+        }
+
+         nav ul {
+          list-style-type: none; /* Quita los puntos de la lista */
+          padding: 0;
+          margin: 0;
+        }
+
+        nav ul li {
+          display: inline; /* Muestra los elementos de la lista en línea */
+          margin-right: 10px; /* Espacio entre elementos */
+        }
+
+        nav ul li a {
+          color: black; /* Color del texto */
+          text-decoration: none; /* Quita la subraya de los enlaces */
+          padding: 5px 10px; /* Espacio interno */
+        }
+
+        nav ul li a:hover {
+          background-color: #5097ff; /* Color de fondo al pasar el ratón */
+          text: bold;
+          text-color: white;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+
+    <h1>Líneas de generación de conocimiento (LGC)</h1>
+
+          <tr>
+            <td><br></td>
+          </tr>
+
+            <h2 >RED LIICEO</h2>
+    </div>
+
+    <div class="container">
+
+        <table class="table">
+            <thead>
+
+                <tr>
+                    <th>NOMBRE (L.G.C)</th>
+                    <th class="text-center">DESCRIPCIÓN</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for l in lgc %}
+                    <tr>
+                        <td class="text-justify">{{ l.nombre }}</td>
+                        <td class="text-justify">{{ l.descripcion }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+
+    </div>
+
+    <!-- Incluye el JavaScript de Bootstrap (opcional, pero necesario para ciertas funcionalidades) -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

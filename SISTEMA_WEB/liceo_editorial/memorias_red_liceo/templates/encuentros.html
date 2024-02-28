@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Encuentros Red Liiceo</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+  }
+
+  h1 {
+    text-align: center;
+    margin-top: 50px;
+    color: #333;
+  }
+
+    h2 {
+    text-align: center;
+    margin-top: 50px;
+    color: #333;
+  }
+
+  table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+
+  th, td {
+    padding: 12px 15px;
+    text-align: left;
+  }
+
+
+
+  th {
+    background-color: #800000;
+    color: #fff;
+    font-weight: bold;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  a {
+    text-decoration: none;
+    color: #4285f4;
+    transition: color 0.3s ease;
+  }
+
+  a:hover {
+    color: #1a73e8;
+  }
+</style>
+</head>
+<body>
+
+<h1>ENCUENTROS RED LIICEO</h1>
+<h2>Memorias de los encuentros realizados por la RED.</h2>
+<table>
+  <tr>
+    <th>Referencia</th>
+    <th>Título</th>
+    <th>Fecha</th>
+    <th>Buscar</th>
+  </tr>
+
+  {% for m in encuentros %}
+  <tr>
+    <td>{{ m.referencia }}</td>
+    <td>{{ m.titulo }}</td>
+    <td>{{ m.fecha }}</td>
+    <td>
+      <a href="encuentros/{{ m.referencia }}.pdf">
+        <i class="fas fa-download download-icon"></i><!-- Ícono de casa de Font Awesome -->
+        Download
+      </a>
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+
+</body>
+</html>
